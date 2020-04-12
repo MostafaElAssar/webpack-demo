@@ -9,4 +9,13 @@ module.exports = {
     publicPath: '',
   },
   devtool: 'cheap-module-eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        excluse: /node_modules/,
+      },
+    ],
+  },
 };
